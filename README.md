@@ -1,5 +1,5 @@
 # css-optimizer
-[css-optimizer](https://github.com/thoqbk/css-optimizer) is a tool that helps you to remove un-used css rules basing sample html file of your website
+[css-optimizer](https://github.com/thoqbk/css-optimizer) is a tool that helps you to remove `un-used css rules` basing sample html files of your website
 
 ## Usage
 
@@ -27,9 +27,12 @@ optimizer.optimize();
 
 ## Example
 
-We used [css-optimizer](https://github.com/thoqbk/css-optimizer) to remove un-used rule in bootstrap.css. 
+We used [css-optimizer](https://github.com/thoqbk/css-optimizer) to remove `un-used css rules` in library bootstrap.css. 
 
-The result is it help us to remove 59% rules and file size reduced from 121KB to 59KB
+The result is it help us to remove `59%` rules and file size reduced from `121KB` to `59KB`
 
 Please checkout and run test file [TestCSSOptimizer.java](https://github.com/thoqbk/css-optimizer/blob/master/src/test/java/com/megaads/css/optimizer/test/TestCSSOptimizer.java) to see example result
 
+## License
+
+The MIT License (MIT)
