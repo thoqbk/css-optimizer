@@ -36,19 +36,6 @@ public class TestCSSOptimizer {
     //--------------------------------------------------------------------------
     //  Members
     private final Logger logger = LoggerFactory.getLogger(TestCSSOptimizer.class);
-
-    private final String openBracket = "\\{";
-    private final String closeBracket = "\\}";
-
-    private final String notOpenAndCloseBracketPattern = "[^" + openBracket + closeBracket + "]";
-
-    private final String singleRulePattern = notOpenAndCloseBracketPattern + "+" + openBracket + notOpenAndCloseBracketPattern + "*?" + closeBracket;
-
-    private final String mediaRulePattern = "@media" + notOpenAndCloseBracketPattern + "+" + openBracket + "(" + singleRulePattern + ")*.*?" + closeBracket;
-    //private final String mediaRulePattern = "@media" + notOpenAndCloseBracketPattern + "+" + openBracket + "(.*?)*" + closeBracket;
-
-    private final Pattern rulePattern = Pattern.compile("(" + mediaRulePattern + "|" + singleRulePattern + ")", Pattern.DOTALL | Pattern.MULTILINE);
-
     //--------------------------------------------------------------------------
     //  Initialization and releasation
     @BeforeClass
@@ -110,132 +97,10 @@ public class TestCSSOptimizer {
         optimizer.optimize();
     }
 
-    //@Test
-    public void test() throws IOException {
-        String[] sampleSiteFileNames = new String[]{
-            "about-us.htm",
-            "airhead.com.htm",
-            "amazon.com.htm",
-            "apparel-amp-amp-accessories.htm",
-            "blog.htm",
-            "bodywear.htm",
-            "categories.htm",
-            "choosing-perfect-top-for-date-night.htm",
-            "home.htm",
-            "stores.htm",
-            "bootstrap-theme.min.css",
-            "main.css"
-        };
-
-        String[] analyzedFiles = new String[]{
-            "bootstrap.css"
-        };
-
-        Set<String> classes = new TreeSet<>();
-        for (String sampleSiteFileName : sampleSiteFileNames) {
-            classes.addAll(extractClasses(readFileContent(sampleSiteFileName)));
-        }
-        //Print out all classes
-        for (String clazz : classes) {
-            logger.info(clazz);
-        }
-    }
-
-    public void testParseCssFiles() {
-
-    }
-
-    //@Test
-    public void testSplitCssRules() throws IOException {
-        String html = readFileContent("test.css");
-        //List<String> rules = extractCssRule(html);
-        Matcher matcher = rulePattern.matcher(html);
-        //Matcher matcher = Pattern.compile(mediaRulePattern, Pattern.DOTALL | Pattern.MULTILINE).matcher(html);
-        while (matcher.find()) {
-            logger.debug("Found rule: " + matcher.group());
-        }
-
-    }
-
     //--------------------------------------------------------------------------
     //  Implement N Override
     //--------------------------------------------------------------------------
-    //  Utils
-    private Set<String> extractClasses(String htmlContent) {
-        Set<String> retVal = new HashSet<>();
-        Elements elements = Jsoup.parse(htmlContent)
-                .body()
-                .getAllElements();
-        for (Element element : elements) {
-            for (String className : element.classNames()) {
-                retVal.add(className);
-            }
-        }
-        //return
-        return retVal;
-    }
-
-    private String readFileContent(String fileName) throws IOException {
-        StringBuilder retVal = new StringBuilder();
-        String path = "/com/megaads/coupon/site/support/resource/c4s/" + fileName;
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(TestCSSOptimizer.class
-                .getResourceAsStream(path)))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                retVal.append(line)
-                        .append("\n");
-            }
-        }
-        //return
-        return retVal.toString();
-    }
-
-    private final Pattern simpleCssRulePattern = Pattern.compile("[\\s^$]*[^\\{\\}]+\\{.*?\\}[\\s^$]*", Pattern.DOTALL | Pattern.MULTILINE);
-
-    private final Pattern commentPattern = Pattern.compile("\\/\\*.*?\\*\\/", Pattern.DOTALL | Pattern.MULTILINE);
-
-    private final Pattern selectorPattern = Pattern.compile("(\\.[^\\{\\}\\s]+)", Pattern.DOTALL | Pattern.MULTILINE);
-
-    private List<String> extractSimpleCssRules(String html) {
-        String stdContent = removeContentByPattern(html, commentPattern);
-        //String stdContentWoMediaRules = removeContentByPattern(stdContent, mediaRulePattern);
-        //return extractCssRulesByPattern(stdContentWoMediaRules, simpleCssRulePattern);
-        return null;
-    }
-
-    private String removeContentByPattern(String content, Pattern pattern) {
-        String retVal = content;
-        boolean found = true;
-        while (found) {
-            Matcher matcher = pattern.matcher(retVal);
-            if (matcher.find()) {
-                StringBuilder retValBuilder = new StringBuilder();
-                int start = matcher.start();
-                int end = matcher.end();
-                if (start > 0) {
-                    retValBuilder.append(retVal.substring(0, start));
-                }
-                retValBuilder.append(retVal.substring(end + 1));
-                retVal = retValBuilder.toString();
-            } else {
-                found = false;
-            }
-        }
-        return retVal;
-    }
-
-    private List<String> extractCssRulesByPattern(String stdContent, Pattern pattern) {
-        List<String> retVal = new ArrayList<>();
-        //logger.info("Remove all comments: " + stdContent);
-        //Matcher matcher = cssRulePattern.matcher(stdContent);
-        Matcher matcher = pattern.matcher(stdContent);
-        while (matcher.find()) {
-            String rule = stdContent.substring(matcher.start(), matcher.end());
-            retVal.add(rule);
-        }
-        //return
-        return retVal;
-    }
+    //  Utils    
     //--------------------------------------------------------------------------
     //  Inner class
 }
