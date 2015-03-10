@@ -1,0 +1,759 @@
+<body class="c4s-body modal-open" data-twttr-rendered="true">
+    <style type="text/css">
+	.btn-sale {
+		padding: 0 !important;
+		margin: 2px 0 0 20px !important;	
+	}
+	.btn-sale:hover,
+	.btn-sale:focus {
+		-moz-box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
+		background: none !important;	
+	}
+</style>
+<div role="navigation" class="navbar navbar-inverse navbar-fixed-top navbar-c4s">
+    <div class="container">
+        <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <button data-target="#search-sm" data-toggle="collapse" class="btn btn-transperent visible-xs" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+            <div class="navbar-brand visible-xs">
+                <a href="http://coupon4share.com">Coupon4Share</a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                                    <li class=""><a href="/">Home</a></li>
+                                    <li class=""><a href="/stores/">Stores</a></li>
+                                    <li class=""><a href="/categories/">Categories</a></li>
+                                    <li class=""><a href="/about-us/">About</a></li>
+                                    <li class=""><a href="/blog/">Blog</a></li>
+                				<!-- 2015 Christmas and New Year -->					
+				<!-- 2015 Valentine
+				Removed on February 24, 2015
+				<li><a class="btn-sale" href="http://coupon4share.com/coupon-category/valentine-039-s-day"><img src="http://coupon4share.com/themes/mobile/files/newyear-2015/coupon4share_icon.png" alt=""></a></li>
+				 -->	
+            </ul>
+            <div class="follow-us pull-right hidden-xs">
+                <span>Follow us:</span>
+                                <a rel="nofollow" target="_blank" href="http://coupon4share.com/feed?post_type=coupon" class="icon-navbar rss-link">Rss</a>
+            </div>
+        </div> <!-- END:Collapse -->
+        <div class="search-mobile hidden-ms">
+            <form action="http://coupon4share.com/" method="get" role="form" class="form-inline collapse" id="search-sm">
+                <div class="form-group">
+                    <input type="hidden" value="http://coupon4share.com/coupon/public/default/ajaxMobileSuggest" id="mobileSuggestUrl">
+                    <input type="text" name="s" placeholder="Search coupon..." autocomplete="off" class="form-control" id="search-mobile">
+                </div>
+                <ul id="autocomplete-mobile"></ul>
+            </form>
+        </div> <!-- END:Search Mobile -->
+    </div>
+</div>
+    <div class="header hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-3">
+                <div class="logo">
+                    <a itemprop="url" href="http://coupon4share.com">
+                        <img itemprop="image" alt="Coupon4Share" src="/themes/mobile/files/img/c4s-logo.png" class="img-responsive">
+                    </a>
+                </div>
+            </div> <!-- END:Logo -->
+            <!-- START:Search Box -->
+            <div class="col-sm-8 col-md-6 col-md-offset-3">
+    <div class="search-box">
+        <form action="http://coupon4share.com/" method="get" id="searchForm" role="form">
+            <div>
+                <input type="hidden" value="http://coupon4share.com/store-suggest" id="storeSuggestUrl">
+                <input type="text" title="Search" placeholder="Search for coupon codes" autocomplete="off" value="" id="search-top" name="s" class="input-search">
+            </div>
+            <button name="Search" type="submit" class="btn-search"></button>
+        </form>
+        <div class="col-sm-12 col-md-12 hidden-xs" id="ajaxsuggest"></div>
+    </div>
+    </div> <!-- END:Search Box -->            <!-- END:Search Box -->
+        </div>
+    </div> <!-- END:Container -->
+</div> <!-- END:Header -->    <div class="container c4s-container">
+    <div class="row">
+    <div class="column-right col-xs-12 col-sm-3 col-md-3 pull-right hidden-xs">
+        <div class="newsletter sidebar hidden-xs hidden-sm">
+    <div class="heading-sidebar red-color">
+        <h2>Newsletter</h2>
+    </div>
+    <div class="content-sidebar">
+        <form role="form" class="form-inline newsletter_form" id="form-right" method="post" action="http://coupon4share.com/submit-newsletter">
+            <div class="form-group">
+                <label for="Email" class="sr-only">Email address</label>
+                <input type="hidden" value="/c/6176">
+                <input type="text" placeholder="Enter email address" role="textbox" autocomplete="off" name="email" id="email-right" class="form-control">
+            </div>
+            <button class="btn btn-success" type="submit">
+                <span class="glyphicon glyphicon-envelope"></span> SEND
+            </button>
+            <div id="newsletter_r"></div>
+        </form>
+        <p class="disclaimer">By pressing Subscribe you are agreeing to get our weekly newsletter. You can opt out anytime.</p>
+    </div>
+</div> <!-- END:Newsletter --><div class="popular-stores sidebar">
+    <div class="heading-sidebar yellow-color">
+        <h2>Popular Stores</h2>
+    </div>
+    <div class="content-sidebar">
+        <ul class="clearfix">
+                                <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="Target Coupons" href="http://coupon4share.com/store/target.com" class="store-logo"><img alt="Target Coupons" src="/data/upload/store/large/2013_09_10_001740_target_coupons.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="eBay Coupons" href="http://coupon4share.com/store/ebay.com" class="store-logo"><img alt="eBay Coupons" src="/data/upload/store/large/2013_08_22_195139_ebay_coupons.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="Macys Coupons" href="http://coupon4share.com/store/macys.com" class="store-logo"><img alt="Macys Coupons" src="/data/upload/store/large/2013_09_10_073814_macys_coupons.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="Kohls Coupons" href="http://coupon4share.com/store/kohls.com" class="store-logo"><img alt="Kohls Coupons" src="/data/upload/store/large/2013_09_16_005848_kohls_coupons.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="Teleflora Coupons" href="http://coupon4share.com/store/teleflora.com" class="store-logo"><img alt="Teleflora Coupons" src="/data/upload/store/large/2013_09_10_001924_teleflora_coupons.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="6pm Coupons" href="http://coupon4share.com/store/6pm.com" class="store-logo"><img alt="6pm Coupons" src="/data/upload/store/large/2013_08_23_012105_6pm_coupon_codes.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="ProFlowers Coupons" href="http://coupon4share.com/store/proflowers.com" class="store-logo"><img alt="ProFlowers Coupons" src="/data/upload/store/large/2013_09_09_002800_proflowers_promo_codes.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="Under Armour Coupons" href="http://coupon4share.com/store/underarmour.com" class="store-logo"><img alt="Under Armour Coupons" src="/data/upload/store/large/2013_09_10_005835_under_armour_coupons.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="Amazon Coupons" href="http://coupon4share.com/store/amazon.com" class="store-logo"><img alt="Amazon Coupons" src="/data/upload/store/large/amazon-coupon-code-1352455445.jpg"></a>
+                    </li>
+                                        <li class="col-xs-4 col-sm-6 col-md-6">
+                        <a title="Wayfair Coupons" href="http://coupon4share.com/store/wayfair.com" class="store-logo"><img alt="Wayfair Coupons" src="/data/upload/store/large/2013_09_08_081914_wayfair_coupons.jpg"></a>
+                    </li>
+                     
+        </ul>
+    </div>
+</div><!-- End:Popular Stores --><div class="lastest-coupons sidebar clearfix">
+    <div class="heading-sidebar blue-color">
+        <h2>Lastest Coupon</h2>
+    </div>
+    <div class="content-sidebar">
+        <ul>
+                            <li>
+                    <a href="http://coupon4share.com/coupons/up-to-500-off-with-lowes-s-promotion-page-free-shipping">Up To $500 OFF With Lowes's Promotion Page + FREE SHipping</a>
+                </li>
+                            <li>
+                    <a href="http://coupon4share.com/coupons/35-off-all-products">35% OFF All Products</a>
+                </li>
+                            <li>
+                    <a href="http://coupon4share.com/coupons/2-back-with-paypal">2% Back with Paypal</a>
+                </li>
+                            <li>
+                    <a href="http://coupon4share.com/coupons/up-to-70-off-electronics-outlet-free-shipping">Up To 70% OFF Electronics Outlet + FREE Shipping</a>
+                </li>
+                            <li>
+                    <a href="http://coupon4share.com/coupons/kohls-free-shipping-code-no-minimum-with-kohls-charge-card">Kohls FREE Shipping Code No Minimum With Kohls Charge Card </a>
+                </li>
+                    </ul>
+    </div>
+</div> 
+    </div>
+    
+    <div class="column-left pull-left col-xs-12 col-sm-9 col-md-9">
+            <div class="section-left">
+		<!--
+			<div class="slider-wrapper theme-default">
+				<div id="slider" class="nivoSlider">
+					<a href="http://coupon4share.com/store/teleflora.com"><img src="/themes/mobile/files/newyear-2015/banner-01.jpg" alt="" /></a>
+					<a href="http://coupon4share.com/store/wayfair.com"><img src="/themes/mobile/files/newyear-2015/banner-02.jpg" alt="" /></a>
+				</div>
+			</div> 
+	-->
+			<!-- END:Slider -->			
+			
+    <div class="heading green-color">
+        <h1>Top coupons</h1>
+    </div>
+        <ul class="coupon-list">
+
+        <li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/amazon.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="Up To 70% OFF Electronics Outlet + FREE Shipping" src="/data/upload/store/thumb/amazon-coupon-code-1352455445.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/amazon.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">Amazon</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="31085" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="31085" itemprop="name">Up To 70% OFF Electronics Outlet + FREE Shipping</span></h3>
+                <div class="desc"><span itemprop="description">Electronics from top brand names available at Amazon! Get 20% - 70% OFF Electronics Outlet + FREE Shipping on orders over $35. Check out great deals!&nbsp;</span></div>
+            </div>
+            <div id="vote-31085" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 30</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 4</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="31085" rel="popover-31085" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-31085">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=Up+To+70%25+OFF+Electronics+Outlet+%2B+FREE+Shipping+&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-electronics-outlet-free-shipping', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=Up+To+70%25+OFF+Electronics+Outlet+%2B+FREE+Shipping++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-electronics-outlet-free-shipping');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-electronics-outlet-free-shipping&amp;title=Up+To+70%25+OFF+Electronics+Outlet+%2B+FREE+Shipping+');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-electronics-outlet-free-shipping&amp;title=Up+To+70%25+OFF+Electronics+Outlet+%2B+FREE+Shipping+');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 31085 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/31085"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=31085"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/wayfair.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="Up to 70% OFF on Daily Deals + FREE Shipping" src="/data/upload/store/thumb/2013_09_08_081914_wayfair_coupons.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/wayfair.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">Wayfair</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="10934" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="10934" itemprop="name">Up to 70% OFF on Daily Deals + FREE Shipping</span></h3>
+                <div class="desc"><span itemprop="description">Redeem this Wayfair coupon and Take 20% - 70% OFF on Daily Deals + FREE shipping on orders over $49 at Wayfair. New sales launch every day and last for 72 hours only!</span></div>
+            </div>
+            <div id="vote-10934" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 3</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 0</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="10934" rel="popover-10934" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-10934">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=Up+to+70%25+OFF+on+Daily+Deals+%2B+FREE+Shipping+&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-on-daily-deals-free-shipping', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=Up+to+70%25+OFF+on+Daily+Deals+%2B+FREE+Shipping++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-on-daily-deals-free-shipping');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-on-daily-deals-free-shipping&amp;title=Up+to+70%25+OFF+on+Daily+Deals+%2B+FREE+Shipping+');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-on-daily-deals-free-shipping&amp;title=Up+to+70%25+OFF+on+Daily+Deals+%2B+FREE+Shipping+');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 10934 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/10934"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=10934"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/ebay.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="Up to 90% OFF Electronics Deals + FREE Shipping " src="/data/upload/store/thumb/2013_08_22_195139_ebay_coupons.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/ebay.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">eBay</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="6176" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="6176" itemprop="name">Up to 90% OFF Electronics Deals + FREE Shipping </span></h3>
+                <div class="desc"><span itemprop="description">Save Up to 90% OFF Electronics Deals + FREE Shipping at eBay.</span></div>
+            </div>
+            <div id="vote-6176" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 12</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 4</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="6176" rel="popover-6176" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-6176">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=Up+to+90%25+OFF+Electronics+Deals+%2B+FREE+Shipping++&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-90-off-electronics-deals-free-shipping', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=Up+to+90%25+OFF+Electronics+Deals+%2B+FREE+Shipping+++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-90-off-electronics-deals-free-shipping');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-90-off-electronics-deals-free-shipping&amp;title=Up+to+90%25+OFF+Electronics+Deals+%2B+FREE+Shipping++');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-90-off-electronics-deals-free-shipping&amp;title=Up+to+90%25+OFF+Electronics+Deals+%2B+FREE+Shipping++');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 6176 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/6176"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=6176"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/6pm.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="Up to 70% OFF 6pm Clearance + FREE Shipping" src="/data/upload/store/thumb/2013_08_23_012105_6pm_coupon_codes.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/6pm.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">6pm</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="9066" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="9066" itemprop="name">Up to 70% OFF 6pm Clearance + FREE Shipping</span></h3>
+                <div class="desc"><span itemprop="description">Save up to 70% OFF 6pm Clearance + FREE Shipping on all orders.</span></div>
+            </div>
+            <div id="vote-9066" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 37</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 4</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="9066" rel="popover-9066" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-9066">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=Up+to+70%25+OFF+6pm+Clearance+%2B+FREE+Shipping+&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-6pm-clearance-free-shipping', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=Up+to+70%25+OFF+6pm+Clearance+%2B+FREE+Shipping++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-6pm-clearance-free-shipping');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-6pm-clearance-free-shipping&amp;title=Up+to+70%25+OFF+6pm+Clearance+%2B+FREE+Shipping+');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-70-off-6pm-clearance-free-shipping&amp;title=Up+to+70%25+OFF+6pm+Clearance+%2B+FREE+Shipping+');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 9066 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/9066"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=9066"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/proflowers.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="Up to 50% OFF Proflowers Coupons &amp; Deals " src="/data/upload/store/thumb/2013_09_09_002800_proflowers_promo_codes.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/proflowers.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">ProFlowers</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="31075" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="31075" itemprop="name">Up to 50% OFF Proflowers Coupons &amp; Deals </span></h3>
+                <div class="desc"><span itemprop="description">Get Up to 50% OFF Proflowers Coupons &amp; Deals at ProFlowers!</span></div>
+            </div>
+            <div id="vote-31075" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 3</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 0</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="31075" rel="popover-31075" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-31075">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=Up+to+50%25+OFF+Proflowers+Coupons+%26+Deals++&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-50-off-proflowers-coupons-deals', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=Up+to+50%25+OFF+Proflowers+Coupons+%26+Deals+++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-50-off-proflowers-coupons-deals');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-50-off-proflowers-coupons-deals&amp;title=Up+to+50%25+OFF+Proflowers+Coupons+%26+Deals++');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-50-off-proflowers-coupons-deals&amp;title=Up+to+50%25+OFF+Proflowers+Coupons+%26+Deals++');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 31075 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/31075"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=31075"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/drugstore.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="Up to 60% OFF with Drugstore Sales &amp; Coupons" src="/data/upload/store/thumb/2013_09_18_020947_drugstore_com_coupons.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/drugstore.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">Drugstore.com</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="12157" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="12157" itemprop="name">Up to 60% OFF with Drugstore Sales &amp; Coupons</span></h3>
+                <div class="desc"><span itemprop="description">Take care of your health and family's &amp; Save up to 60% OFF with Drugstore Sales and Coupons!!!</span></div>
+            </div>
+            <div id="vote-12157" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 3</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 0</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="12157" rel="popover-12157" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-12157">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=Up+to+60%25+OFF+with+Drugstore+Sales+%26+Coupons+&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-60-off-with-drugstore-sales-coupons', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=Up+to+60%25+OFF+with+Drugstore+Sales+%26+Coupons++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-60-off-with-drugstore-sales-coupons');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-60-off-with-drugstore-sales-coupons&amp;title=Up+to+60%25+OFF+with+Drugstore+Sales+%26+Coupons+');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-60-off-with-drugstore-sales-coupons&amp;title=Up+to+60%25+OFF+with+Drugstore+Sales+%26+Coupons+');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 12157 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/12157"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=12157"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/jcpenney" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt=" JCPenney Coupons Codes 15% OFF Your Purchase" src="/upload/store/thumb/2015_02_24_222150_jcpenney_coupons.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/jcpenney" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">JCPenney</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Code:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="28140" class="btn btn-c4s clickredeem" data-original-title="Click to copy &amp; open site">AFFSHOP1</button>
+                </div>
+                <h3 class="title-coupon"><span data="28140" itemprop="name"> JCPenney Coupons Codes 15% OFF Your Purchase</span></h3>
+                <div class="desc"><span itemprop="description">Save 15% OFF your purchase. Excludes Sephora, Gift Cards, Services, Service Plans, current orders/prior purchases, or in combination with any other discount. !!! Redeem&nbsp;JCPenney Coupons Codes 15% OFF March 2015!</span></div>
+            </div>
+            <div id="vote-28140" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 9</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 1</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="28140" rel="popover-28140" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-28140">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=+JCPenney+Coupons+Codes+15%25+OFF+Your+Purchase+&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fjcpenney-coupons-codes-15-off-your-purchase', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=+JCPenney+Coupons+Codes+15%25+OFF+Your+Purchase++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fjcpenney-coupons-codes-15-off-your-purchase');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fjcpenney-coupons-codes-15-off-your-purchase&amp;title=+JCPenney+Coupons+Codes+15%25+OFF+Your+Purchase+');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fjcpenney-coupons-codes-15-off-your-purchase&amp;title=+JCPenney+Coupons+Codes+15%25+OFF+Your+Purchase+');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 28140 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/28140"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=28140"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/macys.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="20% OFF Your Order When Opening Your Macy's Credit Card " src="/data/upload/store/thumb/2013_09_10_073814_macys_coupons.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/macys.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">Macys</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="32751" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="32751" itemprop="name">20% OFF Your Order When Opening Your Macy's Credit Card </span></h3>
+                <div class="desc"><span itemprop="description">Open your Macy's Credit Card &amp; save 20% OFF Your Order! Click here for more details!
+&nbsp;</span></div>
+            </div>
+            <div id="vote-32751" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 4</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 0</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="32751" rel="popover-32751" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-32751">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=20%25+OFF+Your+Order+When+Opening+Your+Macy%27s+Credit+Card++&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2F20-off-your-order-when-opening-your-macy-s-credit-card', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=20%25+OFF+Your+Order+When+Opening+Your+Macy%27s+Credit+Card+++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2F20-off-your-order-when-opening-your-macy-s-credit-card');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2F20-off-your-order-when-opening-your-macy-s-credit-card&amp;title=20%25+OFF+Your+Order+When+Opening+Your+Macy%27s+Credit+Card++');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2F20-off-your-order-when-opening-your-macy-s-credit-card&amp;title=20%25+OFF+Your+Order+When+Opening+Your+Macy%27s+Credit+Card++');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 32751 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/32751"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=32751"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/ftd.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="10% OFF Next Purchase W/ FTD Email Sign Up " src="/data/upload/store/thumb/2013_08_28_011500_ftd_coupon_codes.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/ftd.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">FTD</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="34028" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="34028" itemprop="name">10% OFF Next Purchase W/ FTD Email Sign Up </span></h3>
+                <div class="desc"><span itemprop="description">Join FTD mailing list and get&nbsp;10% OFF Next Purchase! Subscribe now!</span></div>
+            </div>
+            <div id="vote-34028" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 3</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 0</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="34028" rel="popover-34028" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-34028">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=10%25+OFF+Next+Purchase+W%2F+FTD+Email+Sign+Up++&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2F10-off-next-purchase-w-ftd-email-sign-up', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=10%25+OFF+Next+Purchase+W%2F+FTD+Email+Sign+Up+++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2F10-off-next-purchase-w-ftd-email-sign-up');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2F10-off-next-purchase-w-ftd-email-sign-up&amp;title=10%25+OFF+Next+Purchase+W%2F+FTD+Email+Sign+Up++');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2F10-off-next-purchase-w-ftd-email-sign-up&amp;title=10%25+OFF+Next+Purchase+W%2F+FTD+Email+Sign+Up++');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 34028 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/34028"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=34028"><strong>» Edit</strong></a></div></li><li>
+    <div itemscope="" itemtype="http://schema.org/Offer" class="detail">
+        <div class="row">
+            <div class="description col-xs-12 col-sm-10 col-md-10">
+                                <div itemtype="http://schema.org/Product" itemprop="itemOffered">
+                    <div class="logo-image col-xs-3">
+                        <a itemprop="url" href="http://coupon4share.com/store/lowes.com" class="logo-brand col-xs-3">
+                            <img itemprop="image" alt="Up To $500 OFF With Lowes's Promotion Page + FREE SHipping" src="/data/upload/store/thumb/2013_09_09_224532_lowes_coupons.jpg">
+                        </a>
+                        <a href="http://coupon4share.com/store/lowes.com" class="store-link">
+                            More all <span itemtype="http://schema.org/Product" itemprop="itemOffered"><span itemprop="name">Lowes</span></span> coupons »                        </a>
+                    </div>
+                </div>
+                                                <div class="action-button">
+                    <span class="codetext">Promo:</span>
+                    <button data-placement="right" rel="tooltip" title="" data="31814" class="btn btn-c4s clickredeem" data-original-title="Click to open site">Click to Redeem</button>
+                </div>
+                <h3 class="title-coupon"><span data="31814" itemprop="name">Up To $500 OFF With Lowes's Promotion Page + FREE SHipping</span></h3>
+                <div class="desc"><span itemprop="description">Follow this link to save up to $500 OFF with Lowes's Promotion Page plus get FREE shipping on most orders of $49 or more!</span></div>
+            </div>
+            <div id="vote-31814" class="vote col-xs-2 col-sm-2 col-md-2 hidden-xs">
+                <p>Did it work for you?</p>
+                <i class="voteUp"><span class="glyphicon glyphicon-thumbs-up"></span> 3</i>
+                <i class="voteDown"><span class="glyphicon glyphicon-thumbs-down"></span> 0</i>
+                <p class="messages text-success"></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <ul class="actions-list clearfix">
+            <li>
+                <span data-original-title="Share this offer with your friends!" data="31814" rel="popover-31814" class="share">
+                    <span class="glyphicon glyphicon-share-alt"></span> Share
+                </span>
+                <div class="hide" id="share-flyout-31814">
+                    <ul class="clearfix">
+                        <li><a onclick="window.open('http://www.facebook.com/sharer.php?t=Up+To+%24500+OFF+With+Lowes%27s+Promotion+Page+%2B+FREE+SHipping+&amp;u=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-500-off-with-lowes-s-promotion-page-free-shipping', 'doc', 'width=638, height=500, scrollbars=yes, resizable=auto');" class="icon-small facebook" href="javascript:void(0);">Facebook</a></li>
+                        <li><a onclick="window.open('http://twitter.com/home?status=Up+To+%24500+OFF+With+Lowes%27s+Promotion+Page+%2B+FREE+SHipping++-+http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-500-off-with-lowes-s-promotion-page-free-shipping');" class="icon-small twitter" href="javascript:void(0);">Twitter</a></li>
+                        <li><a onclick="window.open('http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-500-off-with-lowes-s-promotion-page-free-shipping&amp;title=Up+To+%24500+OFF+With+Lowes%27s+Promotion+Page+%2B+FREE+SHipping+');" class="icon-small digg" href="javascript:void(0);">Digg</a></li>
+                        <li><a onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-500-off-with-lowes-s-promotion-page-free-shipping&amp;title=Up+To+%24500+OFF+With+Lowes%27s+Promotion+Page+%2B+FREE+SHipping+');" class="icon-small reddit" href="javascript:void(0);">Reddit</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div><!-- END:Action -->
+
+    <div style="text-align: right; padding: 10px; color: red;">Coupon ID: 31814 | <a class="resetVote" href="http://coupon4share.com/reset-coupon/31814"><strong>» Reset vote</strong></a> | <a href="/manage/coupon?coupon_id=31814"><strong>» Edit</strong></a></div></li>
+    </ul>
+
+    </div>    </div>
+</div>
+<div aria-hidden="false" aria-labelledby="popupCouponLabel" role="dialog" data="6176" id="popupCoupon" class="popup-coupon modal fade in" style="display: block;">  
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title"><a href="http://coupon4share.com/store/ebay.com">eBay</a>: Up to 90% OFF Electronics Deals + FREE Shipping </h4>
+            </div>
+            <div class="modal-body">
+                <div class="copy-code">
+                                        <div class="link-holder">
+                        <button class="btn btn-success coupon-code-link " data="6176" id="text_code_6176" type="button">
+                            <span class="glyphicon glyphicon-ok"></span> Click to open site                        </button>
+                    </div>
+                </div>
+                <p>No coupon code required!</p>
+                <p class="text-danger">Spread the word about this deal</p>
+                <div class="submit-coupon">
+                    <div data-share="false" data-show-faces="false" data-action="like" data-send="false" data-layout="box_count" data-width="60" data-href="http://coupon4share.com/coupons/up-to-90-off-electronics-deals-free-shipping" class="fb-like fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=125&amp;href=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-90-off-electronics-deals-free-shipping&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=false&amp;width=60"><span style="vertical-align: bottom; width: 49px; height: 61px;"><iframe width="60px" height="1000px" frameborder="0" name="f3aea5349f81f9e" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 49px; height: 61px;" src="http://www.facebook.com/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FrFG58m7xAig.js%3Fversion%3D41%23cb%3Df1b9ad8578a91e%26domain%3Dcoupon4share.com%26origin%3Dhttp%253A%252F%252Fcoupon4share.com%252Ff3e68e93d04e82%26relation%3Dparent.parent&amp;container_width=125&amp;href=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-90-off-electronics-deals-free-shipping&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=false&amp;width=60" class=""></iframe></span></div>
+                    <div class="tw-like"><iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.b44aac737ba5fb3711801841c2833c12.en.html#_=1425977038982&amp;count=vertical&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fcoupon4share.com%2Fc%2F6176&amp;size=m&amp;text=Up%20to%2090%25%20OFF%20Electronics%20Deals%20%2B%20FREE%20Shipping%20&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-90-off-electronics-deals-free-shipping" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 58px; height: 62px;"></iframe></div>
+                    <div class="gplus-like">
+                        <div style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px;" id="___plusone_0"><iframe width="100%" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" id="I0_1425977038950" name="I0_1425977038950" src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=tall&amp;annotation=bubble&amp;hl=en-US&amp;origin=http%3A%2F%2Fcoupon4share.com&amp;url=http%3A%2F%2Fcoupon4share.com%2Fcoupons%2Fup-to-90-off-electronics-deals-free-shipping&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.k4T_ZtSsQWw.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCN1D09WxLpJwWdwvJVL9IE8tRi5pg#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1425977038950&amp;parent=http%3A%2F%2Fcoupon4share.com&amp;pfname=&amp;rpctoken=42322724" data-gapiattached="true" title="+1"></iframe></div> 
+                    </div>
+                </div>
+                                <div class="popup-more-coupons">
+                    <h5>More eBay coupons</h5>
+                    <ul>
+                                                <li>
+                            <div class="title-coupon">
+                                <a href="http://coupon4share.com/coupons/up-to-60-off-fragrances-for-him-her">Up To 60% OFF Fragrances for Him &amp; Her</a>
+                            </div>
+                            <div class="desc">Spring&nbsp;scents for him and her now available at Ebay! Shop now through March 23.2015 and save! FREE shipping available! Save with eBay Discounts 2015!</div>
+                        </li>
+                                                <li>
+                            <div class="title-coupon">
+                                <a href="http://coupon4share.com/coupons/up-to-60-off-outdoor-entertaining-free-shipping">Up to 60% OFF Outdoor Entertaining + FREE Shipping</a>
+                            </div>
+                            <div class="desc">Go through this eBay coupon and take&nbsp;Up to 60% OFF Outdoor Entertaining + FREE Shipping! Save on&nbsp;Patio &amp; Garden Furniture, Outdoor Cooking &amp; Eating, Outdoor Lighting and more!&nbsp;</div>
+                        </li>
+                                                <li>
+                            <div class="title-coupon">
+                                <a href="http://coupon4share.com/coupons/up-to-50-off-kitchen-electrics">Up to 50% OFF Kitchen Electrics</a>
+                            </div>
+                            <div class="desc">Save 20% - 50% OFF&nbsp;Kitchen Electrics at&nbsp;eBay! No code required! FREE shipping included! Take then chance and save on&nbsp;Coffee &amp; Tea Makers, Blenders &amp; Juicers, Mixers, Cookers &amp; Steamers and more! Limited time only!&nbsp;</div>
+                        </li>
+                                                <li>
+                            <div class="title-coupon">
+                                <a href="http://coupon4share.com/coupons/25-off-all-snow-gear">25% OFF All Snow Gear</a>
+                            </div>
+                            <div class="desc">Shop now through March 10.2015 and get 25% OFF&nbsp;Snow Gear plus get FREE shipping @ eBay! Never miss this eBay discount 2015!</div>
+                        </li>
+                                                <li>
+                            <div class="title-coupon">
+                                <a href="http://coupon4share.com/coupons/up-to-40-off-home-improvement">Up To 40% OFF Home Improvement</a>
+                            </div>
+                            <div class="desc">Go through this eBay coupon and save up to 40% OFF on sinks, faucets, bathtubs and more Home Improvement Equippment! Valid for a limited time only!&nbsp;</div>
+                        </li>
+                                            </ul>
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <!-- START:Footer -->
+<div class="footer">
+    <div class="menu-bottom">
+    <a href="/">Home</a> | <a href="/stores/">Stores</a> | <a href="/categories/">Categories</a> | <a href="/about-us/">About</a> | <a href="/blog/">Blog</a> | <a href="/web-site-terms-and-conditions-of-use/">Terms and Conditions of Use</a> | <a href="/privacy-policy-for-www-on4share/">Privacy Policy</a></div>    <span>Copyright &copy; 2013 Coupon4Share.com</span>
+</div>
+<!-- END:Footer -->
+
+    <div class="share-fixed-left visible-md visible-lg">
+        <div data-share="false" data-show-faces="false" data-action="like" data-send="false" data-layout="box_count" data-width="60" data-href="http://coupon4share.com/" class="fb-like fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=58&amp;href=http%3A%2F%2Fcoupon4share.com%2F&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=false&amp;width=60"><span style="vertical-align: bottom; width: 49px; height: 61px;"><iframe width="60px" height="1000px" frameborder="0" name="f30018af14019ca" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 49px; height: 61px;" src="http://www.facebook.com/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FrFG58m7xAig.js%3Fversion%3D41%23cb%3Df2ea6f809e96a4a%26domain%3Dcoupon4share.com%26origin%3Dhttp%253A%252F%252Fcoupon4share.com%252Ff3e68e93d04e82%26relation%3Dparent.parent&amp;container_width=58&amp;href=http%3A%2F%2Fcoupon4share.com%2F&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=false&amp;width=60" class=""></iframe></span></div>
+        <div class="tw-like"><iframe frameborder="0" id="twitter-widget-1" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.b44aac737ba5fb3711801841c2833c12.en.html#_=1425977038985&amp;count=vertical&amp;dnt=false&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fcoupon4share.com%2Fc%2F6176&amp;size=m&amp;text=Coupon%20Code%202015%3A%20Find%20Coupons%20%26%20Discount%20Codes&amp;url=http%3A%2F%2Fcoupon4share.com%2F" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 58px; height: 62px;"></iframe></div>
+        <div class="gplus-like">
+            <div style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px;" id="___plusone_1"><iframe width="100%" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" id="I1_1425977038954" name="I1_1425977038954" src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=tall&amp;annotation=bubble&amp;hl=en-US&amp;origin=http%3A%2F%2Fcoupon4share.com&amp;url=http%3A%2F%2Fcoupon4share.com%2F&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.k4T_ZtSsQWw.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCN1D09WxLpJwWdwvJVL9IE8tRi5pg#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I1_1425977038954&amp;parent=http%3A%2F%2Fcoupon4share.com&amp;pfname=&amp;rpctoken=29997449" data-gapiattached="true" title="+1"></iframe></div> 
+        </div>
+    </div>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36435156-1', 'coupon4share.com');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script><script src="/themes/mobile/files/js/js-no.js" type="text/javascript"></script>
+<script src="/themes/mobile/files/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/themes/mobile/files/js/html5shiv.min.js" type="text/javascript"></script>
+<script src="/themes/mobile/files/js/respond.min.js" type="text/javascript"></script>
+<script src="/themes/mobile/files/js/ie8-responsive-file-warning.js" type="text/javascript"></script>
+<script src="/themes/mobile/files/js/jquery.placeholder.js" type="text/javascript"></script>
+<script src="/themes/mobile/files/js/main.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*&lt;![CDATA[*/
+jQuery(function($) {
+
+        $("#popupCoupon").modal();
+    
+});
+/*]]&gt;*/
+</script>
+
+<div class="modal-backdrop fade in"></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe frameborder="0" name="fb_xdm_frame_http" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="http://static.ak.facebook.com/connect/xd_arbiter/rFG58m7xAig.js?version=41#channel=f3e68e93d04e82&amp;origin=http%3A%2F%2Fcoupon4share.com"></iframe><iframe frameborder="0" name="fb_xdm_frame_https" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="https://s-static.ak.facebook.com/connect/xd_arbiter/rFG58m7xAig.js?version=41#channel=f3e68e93d04e82&amp;origin=http%3A%2F%2Fcoupon4share.com"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><iframe name="oauth2relay414927360" id="oauth2relay414927360" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fcoupon4share.com#rpctoken=538021204&amp;forcesecure=1" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1"></iframe></body>
