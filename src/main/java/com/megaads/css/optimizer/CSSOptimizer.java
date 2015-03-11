@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2015, GIAYBAC.COM
+ * Copyright (C) 2015, MEGAADS
  * 
 * Released under the MIT license
  */
@@ -59,7 +59,7 @@ public class CSSOptimizer {
     private final Pattern isCSSMediaRulePattern = Pattern.compile("\\s*@media");
     private final Pattern isNonCSSStyleRulePattern = Pattern.compile("\\s*@");
 
-    private final Set<String> inputFilePaths = new HashSet<>();
+    private final Set<String> htmlFiles = new HashSet<>();
     private final String targetFilePath;
     private final String resultFilePath;
 
@@ -91,7 +91,7 @@ public class CSSOptimizer {
      * @param path must be a http(s) url or a local file path
      */
     public void addHtmlFile(String path) {
-        this.inputFilePaths.add(path);
+        this.htmlFiles.add(path);
     }
 
     public void keepTagName(String tagName) {
@@ -123,7 +123,7 @@ public class CSSOptimizer {
     //  Utils
     private void extractUsedClassNamesNTagNames() throws IOException {
         logger.debug("Begin parsing input files");
-        for (String inputFilePath : inputFilePaths) {
+        for (String inputFilePath : htmlFiles) {
             logger.debug("Parsing file: " + inputFilePath);
             extractUsedClassNamesNTagNames(readFileContent(inputFilePath));
         }

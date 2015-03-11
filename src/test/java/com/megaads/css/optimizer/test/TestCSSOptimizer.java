@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2015, GIAYBAC.COM
+ * Copyright (C) 2015, MEGAADS
  * 
 * Released under the MIT license
  */
