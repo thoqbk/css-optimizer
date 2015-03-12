@@ -11,7 +11,7 @@ CSSOptimizer optimizer = new CSSOptimizer("bootstrap.css","bootstrap.min.css");
 
 //Step 02. Sampling your website by downloading web pages or using http urls
 optimizer.addHtmlFile("about-us.htm");
-optimizer.addHtmlFile("amazon.com.htm");
+optimizer.addHtmlFile("home.htm");
 optimizer.addHtmlFile("blog.htm");
 optimizer.addHtmlFile("http://your-website.com/product/ipad");
 
