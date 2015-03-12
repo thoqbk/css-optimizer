@@ -41,7 +41,7 @@ The most important things that i use in this project are `Regular Expression` an
 
 Steps to optimize css file includes:
 * Step 1. use [jsoup](http://jsoup.org/) to parse sampling html files and extract all used html tags and css classes
-* Step 2. use `Regular Expression` to parse css file and put information in object models
+* Step 2. use `Regular Expression` to parse css file and put information into object models
 * Step 3. compare the result from `Step 1.` and `Step 2.` to get only used css rules and write down them into the result file
 
 
