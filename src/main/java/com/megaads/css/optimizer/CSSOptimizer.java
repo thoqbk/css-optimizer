@@ -135,8 +135,10 @@ public class CSSOptimizer {
                 .getAllElements();
         for (Element element : elements) {
             for (String className : element.classNames()) {
-                usedClassNames.add(className);
-                logger.debug("Found class: " + className);
+                if (className != null && className.trim().length() > 0) {
+                    usedClassNames.add(className);
+                    logger.debug("Found class: " + className);
+                }
             }
             usedTagNames.add(element.tagName().toLowerCase());
             logger.debug("Found tag: " + element.tagName());
