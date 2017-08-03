@@ -29,7 +29,7 @@ optimizer.optimize();
 
 We used [css-optimizer](https://github.com/thoqbk/css-optimizer) to remove `un-used css rules` in library [bootstrap.css](http://getbootstrap.com/css/). 
 
-As a result, `59%` rule has been removed, css file size reduced from `121KB` to `59KB` 
+As the result, `59%` rule has been removed, css file size reduced from `121KB` to `59KB` 
 and increased about `5 score` when testing my site on [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 
 Please check out and run the test file [TestCSSOptimizer.java](https://github.com/thoqbk/css-optimizer/blob/master/src/test/java/com/megaads/css/optimizer/test/TestCSSOptimizer.java) to see example result
